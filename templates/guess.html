@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+        <script 
+        src="https://code.jquery.com/jquery-3.2.1.min.js" 
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+    <title>Image Analyzer 4000</title>
+</head>
+<body>
+    <div class="container">
+            <form action="/answer" method="post">
+                <label for="pic">Enter an image URL:</label>
+                <input type="text" name="pic" placeholder="image.jpg">
+                <br>
+                <input type="submit" value="Analyze">
+            </form>
+            <a href="/success"><button>Home</button></a>
+            <!-- <form action="/answer_emotion" method="post">
+                <label for="pic">Enter an image URL for emotional interpretation:</label>
+                <input type="text" name="pic" placeholder="image.jpg">
+                <br>
+                <input type="submit" value="Emotion Detection">
+            </form>
+            <form action="/answer_label" method="post">
+                <label for="pic">Enter an image URL for labels:</label>
+                <input type="text" name="pic" placeholder="image.jpg">
+                <br>
+                <input type="submit" value="Label Detection">
+            </form> -->
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="static/css/answer.css">
+        <link rel="stylesheet" type="text/css" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" type="text/css" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+            <script 
+            src="https://code.jquery.com/jquery-3.2.1.min.js" 
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+            crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+        <title>Image Analyzer 4000</title>
+    </head>
+    <body>
+        <div>
+            <div class="wrapper">
+                    <h1 class="vectro"><span class="vectro-body">I-A-4000</span><span class="vectro-red">I</span><span class="vectro-green">I</span><span class="vectro-blue">I</span></h1>
+            </div>
+        </div>
+        <div class="container">
+                {%if pic%}
+                <div class="container">
+                    <img src="{{pic}}">
+                </div>
+                {%endif%}
+                {%if descriptions%}
+                <h3>Text:</h3>
+                <div class="container">
+                <p>{%for d in descriptions%}
+                {{d.description}},
+                {% endfor%}</p>
+                </div>
+                {%endif%}
+                {%if labels%}
+                <h3>Labels:</h3>
+                <div class="container">
+                    <p>{%for label in labels%}
+                {{label.description}},
+                {% endfor%}</p>
+                </div>
+                {%endif%}
+                {%if faces%}
+                <h3>Emotions:</h3> 
+                <div class="container">
+                {%for face in faces%}
+                <h4>Face</h4>
+                <p>{{'Anger: {}'.format(likelihood_name[face.anger_likelihood])}}</p>
+                <p>{{'Joy: {}'.format(likelihood_name[face.joy_likelihood])}}</p>
+                <p>{{'Surprise: {}'.format(likelihood_name[face.surprise_likelihood])}}</p>
+                <p>{{'Sorrow: {}'.format(likelihood_name[face.sorrow_likelihood])}}</p>
+                {% endfor%}
+                </div>
+                {%endif%}
+                <a href="/success"><button class="back">Back</button></a>
+        </div>
+    </body>
+    </html>

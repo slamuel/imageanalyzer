@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Candal);
+
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
+
+@import url(https://fonts.googleapis.com/css?family=Monoton);
+@import url(https://fonts.googleapis.com/css?family=Chakra+Petch);
+
+
+body { 
+    background: #000; 
+    color: #fff; 
+    position: relative;
+    font-family: 'Chakra Petch', sans-serif;
+}
+input {
+    font-family: 'Chakra Petch', sans-serif;
+}
+img {
+    margin: 20px;
+    vertical-align: top;
+    max-width: 400px;
+    max-height: 400px;
+    padding:1px;
+    border:1px solid whitesmoke;
+    background-color:lightskyblue;
+}
+.container {
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.back {
+    font-family: 'Chakra Petch', sans-serif;
+}
+.chrome {
+    position: relative;
+    background-image: -webkit-linear-gradient(#378DBC 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #FFC488 58%, #582C11 90%, #EC9B4E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 4px #f5f5f5;
+    font-size: 200px;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+    margin: 0;
+    line-height: 1;
+}
+
+.chrome:before {
+    content: 'IMAGE ANALYZER';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+    background-position:-680px 0;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0;
+    padding-right: 300px;
+    -webkit-animation-name: chrome_effect;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.dreams {
+    position: absolute;
+    margin: 0px;
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 160px;
+    color: #F975F7 ;
+    transform:rotate(-15deg);
+    -ms-transform:rotate(-15deg); /* IE 9 */
+    -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+    margin-left: 400px;
+    margin-top: -120px;
+    -webkit-text-stroke: 1px #f008b7;
+    -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+    z-index: 20;
+}
+
+.windows .dreams {
+    -webkit-text-stroke: 4px #f008b7;
+}
+.vectro {
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.1px #f1f1f1;
+    font-family: 'Righteous', cursive;
+    font-size: 160px;
+    margin: 20px;
+}
+  
+.vectro:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*-webkit-animation:vectro_effect 0.067s infinite;*/
+    background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);
+}
+
+.windows .vectro {
+    -webkit-text-stroke: 4px #f1f1f1;
+}
+
+.vectro-body {
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+    -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+    
+}
+
+.vectro-red {
+    color: #F10C20;
+    -webkit-text-fill-color: #F10C20;
+    -webkit-text-stroke: 0;
+    -webkit-filter: drop-shadow(2px 2px 15px #F10C20);
+    font-style: italic;
+    padding-right: 20px;
+}
+.windows .vectro-red {
+    padding-right: 30px;
+}
+
+.vectro-green {
+    color: #6BFF2B;
+    -webkit-text-fill-color: #6BFF2B;
+    -webkit-filter: drop-shadow(2px 2px 15px #6BFF2B);
+    -webkit-text-stroke: 0;
+    font-style: italic;
+    padding-right: 20px;
+    margin-left: -20px;
+}
+
+.windows .vectro-green {
+    padding-right: 30px;
+    margin-left: -30px;
+}
+
+.vectro-blue {
+    color: #3F59F4;
+    -webkit-text-fill-color: #3F59F4;
+    -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+    -webkit-text-stroke: 0;
+    font-style: italic;
+    padding-right: 20px;
+    margin-left: -20px;
+}
+
+.windows .vectro-blue {
+    padding-right: 30px;
+    margin-left: -30px;
+}
+@-webkit-keyframes chrome_effect {
+    0% {background-position:-680px 0;}
+    10% {background-position:420px 0;}
+    100% {background-position:420px 0;}
+}
